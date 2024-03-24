@@ -28,6 +28,5 @@ def main():
     st.markdown('<div style="margin-top: 450px;"</div>',
                 unsafe_allow_html=True)
 
-
-   if __name__ == "__main__":
-       main()
+if __name__ == "__main__":
+    main()
