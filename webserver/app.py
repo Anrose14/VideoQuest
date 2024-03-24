@@ -8,7 +8,7 @@ def open_buy_me_coffee():
 
 
 def main():
-    st.title("Video2Text")
+    st.title("VideoQuest")
  # Embed the Buy Me a Coffee widget using the provided <script> tag
     buy_me_coffee_script = """
          <script
@@ -51,15 +51,6 @@ def main():
 
     st.markdown('<div style="margin-top: 450px;"</div>',
                 unsafe_allow_html=True)
-
-    st.write(
-        "If you need help or have questions about Video2Text, feel free to reach out to me.")
-
-    st.write("Please enter your message below:")
-    user_message = st.text_area("Your Message:")
-
-    st.markdown(
-        f'<a href="mailto:contact@jhayer.tech?subject=Video2Text-Help&body={user_message}">Send Mail</a>', unsafe_allow_html=True)
 
 
 if __name__ == "__main__":
