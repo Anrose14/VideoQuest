@@ -9,26 +9,7 @@ def open_buy_me_coffee():
 
 def main():
     st.title("VideoQuest")
- # Embed the Buy Me a Coffee widget using the provided <script> tag
-    buy_me_coffee_script = """
-         <script
-            data-name="BMC-Widget"
-            data-cfasync="false"
-            src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-            data-id="hayerhans"
-            data-description="If you like this, please consider supporting this work"
-            data-message="If you like this, please consider supporting me!"
-            data-color="#BD5FFF"
-            data-position="Right"
-            data-x_margin="18"
-            data-y_margin="18">
-        </script>
-    """
-    st.components.v1.html(buy_me_coffee_script)
-    st.title("Support Me on Buy Me a Coffee")
-    st.write(
-        "If you find this app helpful and would like to support me, you can buy me a coffee!")
-    st.markdown(buy_me_coffee_script, unsafe_allow_html=True)
+ 
 
     # User input: YouTube URL
     url = st.text_input("Enter YouTube URL:")
