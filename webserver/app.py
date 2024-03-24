@@ -2,11 +2,6 @@ import streamlit as st
 from businessLogic import transcribeVideoOrchestrator
 
 
-def open_buy_me_coffee():
-    st.markdown('<script>document.getElementById("buy-me-coffee-btn").click();</script>',
-                unsafe_allow_html=True)
-
-
 def main():
     st.title("VideoQuest")
  
