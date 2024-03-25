@@ -12,7 +12,7 @@ def main():
     # User input: model
     models = ["tiny", "base", "small", "medium", "large"]
     model = st.selectbox("Select Model:", models)
-    print(model)
+    #print(model)
     st.write(
         "If you take a smaller model it is faster but not as accurate, whereas a larger model is slower but more accurate.")
     if st.button("Transcribe"):
