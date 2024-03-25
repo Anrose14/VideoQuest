@@ -15,7 +15,7 @@ def transcribe(video: dict, model_name="medium"):
     print("Transcribing...", video['name'])
     print("Using model:", model_name)
     model = whisper.load_model(model_name)
-    result = model.transcribe(video,model_name)
+    result = model.transcribe(video)
     pprint(result)
     return result["text"]
 
