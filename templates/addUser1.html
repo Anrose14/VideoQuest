@@ -1,0 +1,37 @@
+
+
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename ='css/cssfiles.css')}}" media="all">
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <a href="{{ url_for('index') }}"><h2 class=" inactive underlineHover"> Sign In </h2></a>
+    <a href="{{ url_for('addUser') }}"><h2 class="active">Sign Up </h2></a>
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+   
+      </div>
+  
+      <!-- Login Form -->
+      <form enctype = "multipart/form-data" action="{{ url_for('addUser') }}" method="POST">
+        <input type="text" id="name" class="fadeIn second" name="user_name" placeholder="name">
+        
+        <input type="text" id="email" class="fadeIn third" name="email" placeholder="email">
+        
+              <input type="password" id="password" class="fadeIn fourth" name="password" placeholder="password">
+        
+              <input type="text" id="age" class="fadeIn fifth" name="age" placeholder="age">
+        
+              <input type="text" id="phone" class="fadeIn sixth" name="phone_number" placeholder="phone number">
+        
+              <input type="text" id="address" class="fadeIn seventh" name="address" placeholder="address">
+        
+        <input type="submit" class="fadeIn eighth" name= "submit_button" value="Register">
+      </form>
+
+  
+    </div>
+  </div>

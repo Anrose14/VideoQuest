@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answering Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+    crossorigin="anonymous"
+  />
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"
+  ></script> -->
+
+</head>
+
+<body>
+
+
+
+    <nav class="navbar is-fixed-top is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-weight-bold is-size-8" href="./">
+                Home
+     
+             </a>
+            <a class="navbar-item has-text-weight-bold is-size-6" href="/summarize">
+                Summarizer
+            </a>
+            <a class="navbar-item has-text-weight-bold is-size-6" href="/answer">
+               Chat
+    
+            </a>
+           
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="title">Question Answering Chat</h1>
+        <div class="chat-container">
+            {% for msg in conversation %}
+            <div class="message">
+                <span class="question">You:</span> {{ msg.question }}<br>
+                <span class="answer">Bot:</span> {{ msg.answer }}
+            </div>
+            {% endfor %}
+        </div>
+        <form action="/answer" method="post" class="chat-form">
+            <input type="text" id="question" name="question" placeholder="Ask a question..." class="input">
+            <input type="submit" value="Send" class="button is-info">
+            <!-- <input type="submit" value="Send" class="btn btn-primary"> -->
+            <!-- <button type="button" class="btn btn-primary">Primary</button> -->
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css') }}">
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar is-fixed-top is-dark">
+    <div class="navbar-brand">
+        <a class="navbar-item has-text-weight-bold is-size-8" href="./">
+            Home
+         </a>
+        <a class="navbar-item has-text-weight-bold is-size-6" href="/summarize">
+            Summarizer
+        </a>
+        <a class="navbar-item has-text-weight-bold is-size-6" href="/answer">
+           Chat
+        </a>
+        
+    </div>
+</nav>
+<div class="container" style="margin-left:  100px;padding: 341px;position:fixed;">
+    <div class="center">
+        <h1 class="is-size-3">Video Quest</h1>
+        <p style="font: size 50px;">A Video Question Answering System</p>
+    </div>
+</div>
+</body>
+</html>

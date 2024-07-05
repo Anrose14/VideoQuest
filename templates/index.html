@@ -1,0 +1,27 @@
+
+
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename ='css/cssfiles.css')}}" media="all">
+
+<h1 class="fadeInDown">
+  VoxSum
+</h1>
+
+<div class="wrapper fadeInDown">
+  
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <a href="{{ url_for('index') }}"><h2 class="active"> Sign In </h2></a>
+    <a href="{{ url_for('addUser') }}"><h2 class="inactive underlineHover">Sign Up </h2></a>
+
+
+    <!-- Login Form -->
+    <form enctype = "multipart/form-data" action="{{ url_for('index') }}" method="POST">
+      <input type="text" id="email" class="fadeIn second" name="email" placeholder="Username">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+      <input type="submit" name="submit_button" value="Login" class="fadeIn fourth">
+    </form>
+
+  </div>
+</div>

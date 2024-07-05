@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answering Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bulma.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <nav class="navbar is-fixed-top is-dark">
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-weight-bold is-size-6" href="/home">
+                Home
+            </a>
+            <a class="navbar-item has-text-weight-bold is-size-6" href="/summarize">
+                Summarizer
+            </a>
+            <a class="navbar-item has-text-weight-bold is-size-6" href="/answer">
+               Chat
+            </a>
+            <a class="navbar-item has-text-weight-bold is-size-8" href="./">
+                Logout
+             </a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="title">Question Answering Chat</h1>
+        <div class="chat-container">
+            {% for msg in conversation %}
+            <div class="message">
+                <span class="question">You:</span> {{ msg.question }}<br>
+                <span class="answer">Bot:</span> {{ msg.answer }}
+            </div>
+            {% endfor %}
+        </div>
+        <form action="/answer" method="post" class="chat-form">
+            <input type="text" id="question" name="question" placeholder="Ask a question..." class="input">
+            <input type="submit" value="Send" class="button is-info">
+        </form>
+    </div>
+</body>
+</html>
