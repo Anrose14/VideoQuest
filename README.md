@@ -9,5 +9,6 @@ The program connects with various APIs and services in addition to NLP component
 - Using HTML templates, the application's user interface is produced and sent to the client browser using Flask's template rendering system. In order to encourage user involvement and engagement, these templates include dynamic features like form inputs, result displays, and interactive components. They also specify the structure, layout, and content of the web pages that are shown to users.
 
 **How to run the code ?**
-- clone the repository
+- Clone the repository locally or download the zip file
+- pip install -r requirements.txt
 - run app.py (necassary requirements should be downloaded)
